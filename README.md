@@ -1,3 +1,9 @@
+# React 2. Odev To-do list
+HTML, CSS dosyaları verilmiş olup, projenin react app olarak oluştulması ve geliştirilmesi tamamen bana aittir. 
+
+NOT: Listenin filtrelenmesinde görev alan butonlar geliştirilme aşamasındadır.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
