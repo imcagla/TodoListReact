@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
 import List from "./List";
-import Form from "./Form";
 import "./style.css";
 
 function Todos() {
@@ -29,7 +28,6 @@ function Todos() {
     return (
         <div className="todoapp" >
             <h1>todos</h1>
-            {/* <Form addTodos={setTodos} todos={todos} /> */}
             <List todos={todos} />
         </div>
     )
