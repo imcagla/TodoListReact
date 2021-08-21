@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 const initialFormValues = { todo:""};
 
@@ -12,7 +13,7 @@ function Form({ addTodos, todos }) {
     const onChangeInput = (e) =>{
         setForm({ ...form, 
             isCompleted: false,
-            [e.target.id]: todos.length+1,
+            [e.target.id]: uuidv4(),
             [e.target.name]: e.target.value, 
             
         });

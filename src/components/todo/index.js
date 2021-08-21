@@ -1,23 +1,24 @@
 import {useState, useEffect} from "react";
 import List from "./List";
 import "./style.css";
+import { v4 as uuidv4 } from 'uuid';
 
 function Todos() {
     const [todos, setTodos] = useState([
         {   
             isCompleted:false,
             todo:"Learn React",
-            id:1,
+            id:uuidv4(),
         },
         {
             isCompleted:false,
             todo:"Learn Javascript", 
-            id:2,
+            id:uuidv4(),
         },
         {
             isCompleted:false,
             todo:"Go to the gym",
-            id:3,
+            id:uuidv4(),
         }
     ]);
 

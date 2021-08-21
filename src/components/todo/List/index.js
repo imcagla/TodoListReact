@@ -16,15 +16,12 @@ function List({ todos }) {
         switch(filterKey){
         case "Completed":
             setLastData(filteredData.filter(todo => todo.isCompleted));
-            console.log("completed seçildi", filteredData)
             break;
         case "Active":
             setLastData(filteredData.filter(todo => !todo.isCompleted));
-            console.log("active seçildi", filteredData)
             break;
-        case "All":
+        case "":
             setLastData(filteredData);
-            console.log("all seçildi", filteredData)
             break;
     }}, [filteredData, filterKey])
 
@@ -85,7 +82,7 @@ function List({ todos }) {
 
                 <ul className="filters">
                     <li>
-                        <a onClick={() => handleFiltering("All")} className={filterKey==="All"?"selected":""} >All</a>
+                        <a onClick={() => handleFiltering("")} className={filterKey===""?"selected":""} >All</a>
                     </li>
                     <li>
                         <a onClick={() => handleFiltering("Active")} className={filterKey==="Active"?"selected":""}  >Active</a>
