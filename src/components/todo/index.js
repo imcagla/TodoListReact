@@ -29,7 +29,7 @@ function Todos() {
     return (
         <div className="todoapp" >
             <h1>todos</h1>
-            <Form addTodos={setTodos} todos={todos} />
+            {/* <Form addTodos={setTodos} todos={todos} /> */}
             <List todos={todos} />
         </div>
     )

@@ -1,9 +1,11 @@
 import {useState, useEffect} from 'react'
+import Form from '../Form';
 
 function List({ todos }) {
     const [check, setCheck] = useState(false);
     const [filteredData, setFilteredData] = useState(todos);
     const [filterKey, setFilterKey] = useState("");
+    const [lastData, setLastData] = useState(filteredData);
     
 
     const handleFiltering = ((filter) =>{
@@ -13,14 +15,18 @@ function List({ todos }) {
     useEffect( () => {
         switch(filterKey){
         case "Completed":
-            setFilteredData(todos.filter(todo => todo.isCompleted));
+            setLastData(filteredData.filter(todo => todo.isCompleted));
+            console.log("completed seçildi", filteredData)
             break;
         case "Active":
-            setFilteredData(todos.filter(todo => !todo.isCompleted));
+            setLastData(filteredData.filter(todo => !todo.isCompleted));
+            console.log("active seçildi", filteredData)
             break;
         case "":
-            setFilteredData(todos);
-    }}, [todos, filterKey])
+            setLastData(filteredData);
+            console.log("all seçildi", filteredData)
+            break;
+    }}, [filteredData, filterKey])
 
     const deleteTodo =((id) => {
         setFilteredData(filteredData.filter((todo) => 
@@ -50,13 +56,14 @@ function List({ todos }) {
 
     return (
         <div>
+            <Form addTodos={setFilteredData} todos={filteredData} />
             <section className="main">
                 <input className="toggle-all" id="toggle-all" type="checkbox" ></input>
                 <label htmlFor="toggle-all" onClick={setAllChecked}>Abc</label>
 
                 <ul className="todo-list">
                     {
-                        filteredData.map((child, index) => (
+                        lastData.map((child, index) => (
                             <li key={index} className={child.isCompleted?"completed":""}> 
                                 <div className="view">
                                     <input className="toggle" type="checkbox" 
