@@ -1,7 +1,6 @@
 # React 2. Odev To-do List
-HTML, CSS dosyaları verilmiş olup, projenin react app olarak oluşturulması ve geliştirilmesi tamamen bana aittir. 
+HTML, CSS dosyaları verilmiş olup, projenin react app olarak oluşturulması ve javascript dosyalarının geliştirilmesi tamamen bana aittir. 
 
-NOT: Listenin filtrelenmesinde görev alan butonlar (all, active, completed butonları) geliştirilme aşamasındadır.
 
 
 # Getting Started with Create React App
