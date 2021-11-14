@@ -1,6 +1,8 @@
 # React 2. Odev To-do List
 HTML, CSS dosyaları verilmiş olup, projenin react app olarak oluşturulması ve javascript dosyalarının geliştirilmesi tamamen bana aittir. 
 
+preview:
+![todolist](https://github.com/imcagla/TodoListReact/blob/master/todolist.PNG?raw=true "Title")
 
 
 # Getting Started with Create React App
